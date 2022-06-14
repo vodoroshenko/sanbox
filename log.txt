@@ -1,0 +1,17 @@
+commit cdb00fabba23bed5ff4c3d2236cdf37b39e413f5
+Author: vodoroshenko <vodoroshenko@exadel.com>
+Date:   Tue Jun 14 15:26:57 2022 +0300
+
+    readme.md
+
+commit fe3fdd8d018218df1f8feec71e691a8e25ed5e68
+Author: vodoroshenko <vodoroshenko@exadel.com>
+Date:   Tue Jun 14 15:24:17 2022 +0300
+
+    delete
+
+commit 6886d5aaf61ec1cda4daa93da7ad1ed990c04812
+Author: vodoroshenko <vodoroshenko@exadel.com>
+Date:   Tue May 24 10:36:13 2022 +0300
+
+    test tasks
