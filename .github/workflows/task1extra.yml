@@ -41,15 +41,13 @@ jobs:
         id: current-time
         with:
             format: YYYY:MM:DD-HH:MM:SS
-            utcOffset: "+02:00"
+            utcOffset: "+08:00"
       - name: Use current time
         env:
           TIME: "${{ steps.current-time.outputs.time }}"
-          #R_TIME: "${{ steps.current-time.outputs.readableTime }}"
-          #F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-          YEAR: "${{ steps.current-time.outputs.year }}"
-          MONTH: "${{ steps.current-time.outputs.month }}"
-          DAY: "${{ steps.current-time.outputs.day }}"
+          #YEAR: "${{ steps.current-time.outputs.year }}"
+          #MONTH: "${{ steps.current-time.outputs.month }}"
+          #DAY: "${{ steps.current-time.outputs.day }}"
         run: echo $TIME
       #- name: Get the system date and time
       #  id: date
