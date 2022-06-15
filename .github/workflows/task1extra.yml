@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Change dir
-        run: cd /Task1
+        run: cd ../../Task1
       - name: Print the list of files
         run: git ls-tree --full-tree -r --name-only HEAD
       - name: Print content of your log.txt file
