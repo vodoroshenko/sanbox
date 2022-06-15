@@ -48,8 +48,8 @@ jobs:
         #    utcOffset: "+02:00"
       - name: Print current date and time
         env:
-          TIME: "${{ steps.time.outputs.time }}"
-          #TIME: "${{ steps.current-time.outputs.time }}"
+          #TIME: "${{ steps.time.outputs.time }}"
+          TIME: "${{ steps.current-time.outputs.time }}"
         run: echo $TIME
       - name: Print your variable’s content
         run: echo "DAY_OF_MONTH ${{ env. DAY_OF_MONTH}}, MONTH ${{ env. MONTH}},YEAR ${{ env. YEAR}}"
