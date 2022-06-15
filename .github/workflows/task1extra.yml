@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print the list of files
-        run: git ls-tree --full-tree -r --name-only HEAD ../../sanbox
+        run: git ls-tree --full-tree -r --name-only HEAD ../../
       - name: Print content of your log.txt file
         run: cat ../../Task1/log.txt
       - name: Print Hello from
