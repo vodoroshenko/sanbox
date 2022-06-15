@@ -1,0 +1,2 @@
+#Add .gitignore file to ignore all files whose name begins “.”
+.*
