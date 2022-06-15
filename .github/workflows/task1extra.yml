@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Change dir
-        run: git init /vodoroshenko/sanbox.git
+        run: git status
       - name: Print the list of files
         run: git ls-tree --full-tree -r --name-only HEAD
       - name: Print content of your log.txt file
