@@ -37,19 +37,14 @@ jobs:
       
     steps:
       - name: Get current date and time
-        #uses: josStorer/get-current-time@v2
         uses: nanzm/get-time-action@v1.1
         id: current-time
         with:
           timeZone: 3
           format: 'YYYY-MM-DD-HH-mm-ss'
-        #with:
-        #    format: YYYY:MM:DD-HH:mm:ss
-        #    utcOffset: "+02:00"
       - name: Print current date and time
         env:
-          #TIME: "${{ steps.time.outputs.time }}"
-          TIME: "${{ steps.current-time.outputs.time }}"
+         TIME: "${{ steps.current-time.outputs.time }}"
         run: echo $TIME
       - name: Print your variable’s content
         run: echo "DAY_OF_MONTH ${{ env. DAY_OF_MONTH}}, MONTH ${{ env. MONTH}},YEAR ${{ env. YEAR}}"
