@@ -41,7 +41,7 @@ jobs:
         uses: nanzm/get-time-action@v1.1
         id: current-time
         with:
-          timeZone: 2
+          timeZone: 3
           format: 'YYYY-MM-DD-HH-mm-ss'
         #with:
         #    format: YYYY:MM:DD-HH:mm:ss
