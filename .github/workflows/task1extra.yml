@@ -17,8 +17,6 @@ jobs:
     name: My first job
     runs-on: ubuntu-latest
     steps:
-      - name: Git init
-        run: git init /Task1
       - name: Print the list of files
         run: git ls-tree --full-tree -r --name-only HEAD
       - name: Print content of your log.txt file
