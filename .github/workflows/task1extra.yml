@@ -17,12 +17,10 @@ jobs:
     name: My first job
     runs-on: ubuntu-latest
     steps:
-      - name: Change dir
-        run: cd ../../
       - name: Print the list of files
-        run: git ls-tree --full-tree -r --name-only HEAD
+        run: git ls-tree --full-tree -r --name-only HEAD /vodoroshenko/sanbox
       - name: Print content of your log.txt file
-        run: cat Task1/log.txt
+        run: cat ../../Task1/log.txt
       - name: Print Hello from
         run: echo "Hello from ${{ env. DEPLOY_VERSION}}"
 
