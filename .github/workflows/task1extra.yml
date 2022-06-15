@@ -50,7 +50,7 @@ jobs:
           YEAR: "${{ steps.current-time.outputs.year }}"
           MONTH: "${{ steps.current-time.outputs.month }}"
           DAY: "${{ steps.current-time.outputs.day }}"
-        run: echo $TIME $YEAR $MONTH $DAY
+        run: echo $TIME
       #- name: Get the system date and time
       #  id: date
       #  run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
