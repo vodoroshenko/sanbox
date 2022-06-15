@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        run: git checkout
+        uses: actions/chechout@v3
       - name: Print the list of files
         run: git ls-tree --full-tree -r --name-only HEAD 
       - name: Print content of your log.txt file
