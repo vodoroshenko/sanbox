@@ -18,17 +18,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/chechout@v2
+        uses: actions/checkout@v2
       - name: Print the list of files
         run: git ls-tree --full-tree -r --name-only HEAD 
       - name: Print content of your log.txt file
-        run: cat ../../Task1/log.txt
+        run: cat Task1/log.txt
       - name: Print Hello from
         run: echo "Hello from ${{ env. DEPLOY_VERSION}}"
 
   job2:
     name: My second job
-    #needs: job1
+    needs: job1
     runs-on: ubuntu-latest
     env:
       MONTH: May
