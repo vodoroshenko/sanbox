@@ -1,0 +1,42 @@
+name: task1
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push but only for the "master" branch
+  push:
+    branches: [ "master" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  DEPLOY_VERSION: ${{ github.sha }}
+  YEAR: 1979
+
+jobs:
+  job1:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the list of files
+        run: git ls-tree --full-tree -r --name-only HEAD
+      - name: Print content of your log.txt file
+        run: cat Task1/log.txt
+      - name: Print Hello from
+        run: echo "Hello from ${{ env. DEPLOY_VERSION}}"
+
+  job2:
+    name: My second job
+    needs: job1
+    runs-on: ubuntu-latest
+    env:
+      MONTH: May
+      DAY_OF_MONTH: 17
+      FAVORITE_DAY_OF_WEEK: ${{ secrets.FAVORITE_DAY_OF_WEEK }}
+      
+    steps:
+      - name: Print the system date and time
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Print your variable’s content
+        run: echo "DAY_OF_MONTH ${{ env. DAY_OF_MONTH}}, MONTH ${{ env. MONTH}},YEAR ${{ env. YEAR}}"
+      - name: Print FAVORITE_DAY_OF_WEEK
+        run: echo "FAVORITE_DAY_OF_WEEK"
