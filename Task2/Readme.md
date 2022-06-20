@@ -66,7 +66,11 @@ item 1:
 
 1.7 Repeat item 1.1-1.6 to crete second VPC and VM in this VPC
 
-1.8 Check connectivity via external and internal IP - PASS
+1.8 Create peering connection
+
+1.9 Add routes with peering connection to subnets
+
+1.10 Check connectivity via external and internal IP - PASS
 
 
 item 2:
