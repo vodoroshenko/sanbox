@@ -13,13 +13,13 @@ resource "tls_private_key" "key_pair_centos" {
 
 # Create the Key Pair
 resource "aws_key_pair" "key_pair_ubuntu" {
-  key_name   = "${lower(var.app_name)}-${lower(var.app_environment)}-${lower(var.aws_region)}"
+  key_name   = "${lower(var.app_name)}-${lower(var.app_environment)}"
   public_key = tls_private_key.key_pair_ubuntu.public_key_openssh
 }
 
 # Create the Key Pair
 resource "aws_key_pair" "key_pair_centos" {
-  key_name   = "${lower(var.app_name_centos)}-${lower(var.app_environment_centos)}-${lower(var.aws_region)}"
+  key_name   = "${lower(var.app_name_centos)}-${lower(var.app_environment_centos)}"
   public_key = tls_private_key.key_pair_centos.public_key_openssh
 }
 
