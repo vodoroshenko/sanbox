@@ -1,0 +1,10 @@
+Host ec2-34-231-126-137.compute-1.amazonaws.com
+  Hostname ec2-34-231-126-137.compute-1.amazonaws.com
+  user ubuntu
+  IdentityFile ~/.ssh/sanbox-test.pem
+
+Host ec2-34-231-246-120.compute-1.amazonaws.com
+  Hostname ec2-34-231-246-120.compute-1.amazonaws.com
+  user centos
+  IdentityFile ~/.ssh/id_rsa
+  ProxyJump ec2-34-231-126-137.compute-1.amazonaws.com

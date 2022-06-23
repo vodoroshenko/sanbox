@@ -1,0 +1,14 @@
+1. Set up ssh tunnel between two VMs. Config file - ssh_config
+
+2. Set up proxy server on Ubuntu. I use SQUID
+
+3. Add neccessary rules to VMS
+
+4. Install apache
+
+yum update -y; 
+yum install -y httpd
+
+5. Create the webpage (code taken from Task2)
+
+6. Check connection - PASSED
