@@ -1,9 +1,12 @@
 version: "3"
 services:
        variable:
-               container_name: task5extra
                image: $IMAGE1
-               ports: $PORTS
+               ports:
+               - $PORTS
+               deploy:
+                mode: replicated
+                replicas: 5
 
        java_application:
               container_name: java_app
@@ -14,9 +17,8 @@ services:
        database:
                container_name: dbcontainer
                image: $IMAGE3
-               #ports:
-                       #- "3306:3306"
                environment:
                - MYSQL_ROOT_PASSWORD=password
                - MYSQL_USER=user
                - MYSQL_PASSWORD=password
+
