@@ -1,0 +1,2 @@
+sudo docker tag variable:latest xotabich/variable:latest - create the tag
+sudo docker push xotabich/variable:latest
