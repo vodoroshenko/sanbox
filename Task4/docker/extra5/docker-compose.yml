@@ -1,24 +1,22 @@
-version: "1.26.0"
+version: "3"
 services:
        variable:
                container_name: task5extra
-               image: variable:latest
-               ports:
-               - 80:80
+               image: $IMAGE1
+               ports: $PORTS
 
        java_application:
               container_name: java_app
-              image: openjdk:demo
+              image: $IMAGE2
               depends_on:
               - database
 
        database:
-               container_name: DBContainer
-               image: mysql
-               ports:
-               - "3306:3306"
+               container_name: dbcontainer
+               image: $IMAGE3
+               #ports:
+                       #- "3306:3306"
                environment:
                - MYSQL_ROOT_PASSWORD=password
                - MYSQL_USER=user
                - MYSQL_PASSWORD=password
-                 #- MY_SQL_DATABASE=demodb
