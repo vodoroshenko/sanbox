@@ -1,0 +1,1 @@
+ansible-playbook docker-install.yml -l servers

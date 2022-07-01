@@ -1,0 +1,6 @@
+[servers]
+ec2-54-145-135-64.compute-1.amazonaws.com ansible_ssh_private_key_file=/home/ubuntu/task5-second.pem
+ec2-44-202-245-204.compute-1.amazonaws.com ansible_ssh_private_key_file=/home/ubuntu/task5-third.pem
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3

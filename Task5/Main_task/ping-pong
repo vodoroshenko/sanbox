@@ -1,0 +1,10 @@
+ansible all -m ping -u ubuntu  
+ec2-44-202-245-204.compute-1.amazonaws.com | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+ec2-54-145-135-64.compute-1.amazonaws.com | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+
