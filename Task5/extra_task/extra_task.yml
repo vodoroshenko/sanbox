@@ -1,0 +1,8 @@
+---
+- hosts: aws_ec2
+  become: yes
+  vars:
+   include_vars: vault
+  roles:
+    - install_docker
+    - install_wordpress

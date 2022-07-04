@@ -1,0 +1,17 @@
+- hosts: servers
+  become: true
+
+  tasks:
+    - name: ensure repository key is installed
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: ensure docker registry is available
+      apt_repository: repo='deb https://download.docker.com/linux/ubuntu focal stable' state=present
+
+    - name: docker install
+      apt: name=docker-ce update_cache=yes
+
+    - name: python3-docker
+      apt: name=python3-docker update_cache=yes
