@@ -1,0 +1,1 @@
+ansible-playbook -i aws_ec2.yaml extra_task.yml --private-key=/home/ubuntu/task5-second.pem --ask-vault-pass
