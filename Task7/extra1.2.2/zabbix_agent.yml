@@ -1,0 +1,10 @@
+---
+- hosts:
+  - server
+  - slave
+  user: "{{ user | default(lookup('env', 'USER')) }}"
+  become: yes
+  roles:
+    - zabbix_agent_install
+    - zabbix_agent
+

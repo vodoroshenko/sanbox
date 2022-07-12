@@ -1,0 +1,33 @@
+---
+- name: Lookup conf files
+  find:
+    paths: /etc/zabbix/zabbix_agentd.d/
+    file_type: file
+    patterns: "*.conf"
+  register: conf_files
+
+- name: Update Zabbix configuration files permissions
+  file:
+    path: "{{ item.path }}"
+    state: file
+    mode: "0644"
+  with_items: "{{ conf_files.files }}"
+  notify: Restart Zabbix agent
+
+- name: Install Zabbix agent and needed packages
+  apt:
+    name: ['zabbix-agent', 'sysstat']
+    state: latest
+    update_cache: yes
+  with_items:
+  - zabbix-agent
+  - sysstat
+
+- name: Creating Zabbix log directory
+  file: path=/var/log/zabbix state=directory owner=zabbix group=zabbix mode=0755
+  notify: Restart Zabbix agent
+
+- name: Creating Zabbix run directory
+  file: path=/var/run/zabbix state=directory owner=zabbix group=zabbix mode=0755
+  notify: Restart Zabbix agent
+

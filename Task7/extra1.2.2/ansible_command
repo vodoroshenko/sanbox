@@ -1,0 +1,2 @@
+ansible-playbook -i /etc/ansible/hosts -l server zabbix_agent.yml --extra-vars="user=user" -k -K -D
+ansible-playbook -i /etc/ansible/hosts -l slave zabbix_agent.yml --extra-vars="user=user" -k -K -D
