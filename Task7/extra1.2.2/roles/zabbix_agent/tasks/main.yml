@@ -25,7 +25,6 @@
 
 - name: Update Zabbix agent main configuration file
   template: src=zabbix_agentd.j2 dest=/etc/zabbix/zabbix_agentd.conf owner=root mode=0644 
-  #notify: Restart Zabbix agent
 
 - name: Creating Zabbix log directory
   file: path=/var/log/zabbix state=directory owner=zabbix group=zabbix mode=0755
