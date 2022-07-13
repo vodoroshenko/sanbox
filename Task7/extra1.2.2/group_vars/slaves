@@ -1,0 +1,4 @@
+---
+zabbix:
+  server_addresses:
+  - 172.20.136.30

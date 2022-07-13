@@ -1,0 +1,5 @@
+Server={{ zabbix.server_addresses | join(',') }}
+ServerActive={{ zabbix.active_server_address | default( zabbix.server_addresses | join(',') ) }}
+PidFile=/var/run/zabbix/zabbix_agentd.pid
+LogFile=/var/log/zabbix/zabbix_agentd.log
+LogFileSize=10

@@ -7,4 +7,6 @@
   roles:
     - zabbix_agent_install
     - zabbix_agent
+  vars_files:
+  - group_vars/slaves  
 
